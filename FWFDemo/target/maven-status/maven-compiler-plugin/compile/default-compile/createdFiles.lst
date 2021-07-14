@@ -1,0 +1,11 @@
+com\kilong\servlet\InsertServlet.class
+com\kilong\util\Result.class
+com\kilong\filter\CORSFilter.class
+com\kilong\dao\StudentDao.class
+com\kilong\domain\Student.class
+com\kilong\servlet\DeleteServlet.class
+com\kilong\service\StudentService.class
+com\kilong\servlet\SelectOneServlet.class
+com\kilong\service\impl\StudentServiceImpl.class
+com\kilong\servlet\SelectAllServlet.class
+com\kilong\servlet\UpdateServlet.class

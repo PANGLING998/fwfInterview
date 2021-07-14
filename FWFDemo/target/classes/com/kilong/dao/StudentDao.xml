@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kilong.dao.StudentDao">
+
+    <select id="FindAll" resultType="com.kilong.domain.Student">
+        select * from student;
+    </select>
+
+    <select id="ByIdFind" parameterType="int" resultType="com.kilong.domain.Student">
+        select * from student where uid=#{id};
+    </select>
+
+    <insert id="InsertStudent" parameterType="com.kilong.domain.Student" >
+        insert into student value (#{uid},#{name},#{age},#{grade},#{dorm});
+    </insert>
+
+    <delete id="DeleteStudent" parameterType="int">
+        delete from student where uid=#{uid};
+    </delete>
+    
+    <update id="UpdateStudent" parameterType="com.kilong.domain.Student">
+        update student set name=#{name},age=#{age},grade=#{grade},dorm=#{dorm} where uid=#{uid};
+    </update>
+
+
+</mapper>
