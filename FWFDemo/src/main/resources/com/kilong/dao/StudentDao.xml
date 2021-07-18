@@ -8,7 +8,7 @@
         select * from student;
     </select>
 
-    <select id="ByIdFind" parameterType="int" resultType="com.kilong.domain.Student">
+    <select id="ByIdFind" parameterType="String" resultType="com.kilong.domain.Student">
         select * from student where uid=#{id};
     </select>
 
@@ -16,7 +16,7 @@
         insert into student value (#{uid},#{name},#{age},#{grade},#{dorm});
     </insert>
 
-    <delete id="DeleteStudent" parameterType="int">
+    <delete id="DeleteStudent" parameterType="String">
         delete from student where uid=#{uid};
     </delete>
     

@@ -3,17 +3,17 @@ package com.kilong.domain;
 import java.io.Serializable;
 
 public class Student implements Serializable {
-    private int uid;
+    private String uid;
     private String name;
-    private int age;
+    private Integer age;
     private String grade;
-    private int dorm;
+    private Integer dorm;
 
-    public int getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
@@ -29,7 +29,7 @@ public class Student implements Serializable {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -45,14 +45,14 @@ public class Student implements Serializable {
         return dorm;
     }
 
-    public void setDorm(int dorm) {
+    public void setDorm(Integer dorm) {
         this.dorm = dorm;
     }
 
     public Student() {
     }
 
-    public Student(int uid, String name, int age, String grade, int dorm) {
+    public Student(String uid, String name, Integer age, String grade, Integer dorm) {
         this.uid = uid;
         this.name = name;
         this.age = age;

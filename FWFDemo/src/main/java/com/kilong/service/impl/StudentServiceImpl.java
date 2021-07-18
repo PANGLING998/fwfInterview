@@ -36,21 +36,21 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student ByIdFind(int id) {
+    public Student ByIdFind(String id) {
          Student student=null;
          student = studentDao.ByIdFind(id);
         return student;
     }
 
     @Override
-    public int InsertStudent(Student student) {
+    public Integer InsertStudent(Student student) {
         int i = studentDao.InsertStudent(student);
         session.commit();
         return i;
     }
 
     @Override
-    public int DeleteStudent(int uid) {
+    public int DeleteStudent(String uid) {
         int i = studentDao.DeleteStudent(uid);
         session.commit();
         return i;

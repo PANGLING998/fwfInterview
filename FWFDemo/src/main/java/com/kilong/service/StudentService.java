@@ -18,19 +18,19 @@ public interface StudentService {
      * @param id
      * @return
      */
-    Student ByIdFind(int id);
+    Student ByIdFind(String id);
     /**
      * 插入一条记录
      * @param student
      * @return
      */
-    int InsertStudent(Student student);
+    Integer InsertStudent(Student student);
     /**
      * 根据学号删除对应学生
      * @param uid
      * @return
      */
-    int DeleteStudent(int uid);
+    int DeleteStudent(String uid);
     /**
      * 修改学生信息
      * @param student

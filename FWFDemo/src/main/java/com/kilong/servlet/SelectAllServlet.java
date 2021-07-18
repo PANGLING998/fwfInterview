@@ -20,11 +20,13 @@ public class SelectAllServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         StudentService service=new StudentServiceImpl();
         List<Student> students = service.FindAll();
         String json1="";
         if (students.isEmpty()){
-             json1 = Result.ResultList("1", "", students);
+             json1 = Result.ResultList("1", "查询失败", students);
         }else {
              json1 = Result.ResultList("0", "查询成功", students);
         }

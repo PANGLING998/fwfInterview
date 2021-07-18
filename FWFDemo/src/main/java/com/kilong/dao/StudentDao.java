@@ -13,10 +13,10 @@ public interface StudentDao {
 
     /**
      * 根据学号查询对应学生
-     * @param id
+     * @param uid
      * @return
      */
-    Student ByIdFind(int id);
+    Student ByIdFind(String uid);
 
     /**
      * 插入一条记录
@@ -30,7 +30,7 @@ public interface StudentDao {
      * @param uid
      * @return
      */
-    int DeleteStudent(int uid);
+    int DeleteStudent(String uid);
 
     /**
      * 修改学生信息

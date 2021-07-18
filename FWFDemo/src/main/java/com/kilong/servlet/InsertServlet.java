@@ -21,6 +21,8 @@ public class InsertServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         BufferedReader reader = request.getReader();
         String line=null;
         String json="";
